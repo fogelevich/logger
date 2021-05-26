@@ -24,10 +24,12 @@
     "build:clean": "shx rm -rf ./lib && shx mkdir lib",
     "build:force": "heft build --clean",
     "build:watch": "heft build --watch",
-    "clean": "shx rm -rf ./node_modules && shx rm -rf ./coverage && pnpm build:clean"
+    "clean": "shx rm -rf ./node_modules && shx rm -rf ./coverage && pnpm build:clean",
+    "test": "ts-node ./src/spec/example.test.ts"
   },
   "dependencies": {
-    "tslib": "^2.2.0"
+    "tslib": "^2.2.0",
+    "ts-node": "^10.0.0"
   },
   "devDependencies": {
     "@rushstack/heft": "^0.30.5",

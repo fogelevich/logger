@@ -8,10 +8,12 @@ export interface Logger {
   info(msg: string): void;
   warn(msg: string): void;
   error(msg: string): void;
+  trace(msg: string): void;
 }
 
 enum LOG_LEVELS {
   VERBOSE = 1,
+  TRACE,
   DEBUG,
   INFO,
   WARN,
@@ -59,6 +61,9 @@ export class ConsoleLogger implements Logger {
     if (type === "WARN" && console.warn) {
       log = console.warn.bind(console);
     }
+    if (type === "TRACE" && console.trace) {
+      log = console.trace.bind(console);
+    }
 
     const prefix = `[${type}] ${this._ts()} ${this.name}`;
 
@@ -99,5 +104,9 @@ export class ConsoleLogger implements Logger {
 
   verbose(...msg: any[]) {
     this._log("VERBOSE", ...msg);
+  }
+
+  trace(...msg: any[]) {
+    this._log("TRACE", ...msg);
   }
 }
