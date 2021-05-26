@@ -13,11 +13,11 @@ export interface Logger {
 
 enum LOG_LEVELS {
   VERBOSE = 1,
-  TRACE,
   DEBUG,
   INFO,
   WARN,
   ERROR,
+  TRACE,
 }
 
 export class ConsoleLogger implements Logger {
