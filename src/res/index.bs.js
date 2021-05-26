@@ -17,9 +17,14 @@ function ts(param) {
           ].join(":") + "." + String(date.getMilliseconds());
 }
 
+function prefixFn(logLevelsType, name) {
+  return "[" + logLevelsType + "] " + ts(undefined) + " " + name;
+}
+
 export {
   padding ,
   ts ,
+  prefixFn ,
   
 }
 /* No side effect */
