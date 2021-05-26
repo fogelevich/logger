@@ -20,7 +20,7 @@
     "index.d.ts"
   ],
   "scripts": {
-    "build": "pnpm build:clean && re:build && heft build --clean",
+    "build": "pnpm build:clean && pnpm re:build && heft build --clean",
     "build:clean": "cross-env rm -rf ./lib && cross-env mkdir lib",
     "build:force": "heft build --clean",
     "build:watch": "heft build --watch",
