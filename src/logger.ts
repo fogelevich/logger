@@ -1,4 +1,4 @@
-import {ts} from './res/index.gen'
+import {ts} from './res/index.bs.js'
 export interface Logger {
   debug(msg: string): void;
   info(msg: string): void;

@@ -36,6 +36,6 @@
     "strictFunctionTypes": true,
     "pretty": true
   },
-  "include": ["./src/**/*.ts", "./src/**/*.tsx", "index.ts"],
+  "include": ["./src/**/*.ts", "./src/**/*.tsx", "index.ts", "./src/**/*.js"],
   "exclude": ["**/*.test.ts", "**/*.test.tsx"]
 }
