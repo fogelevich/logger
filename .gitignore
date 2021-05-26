@@ -74,3 +74,6 @@ lib/
 temp/
 lib/
 types/**
+
+# ReScript
+.merlin
