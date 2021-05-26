@@ -1,8 +1,3 @@
-declare global {
-  interface Window {
-    LOG_LEVEL: string;
-  }
-}
 export interface Logger {
   debug(msg: string): void;
   info(msg: string): void;
@@ -45,7 +40,9 @@ export class ConsoleLogger implements Logger {
     if (ConsoleLogger.LOG_LEVEL) {
       logger_level_name = ConsoleLogger.LOG_LEVEL;
     }
+    // @ts-expect-error
     if (typeof window !== "undefined" && window.LOG_LEVEL) {
+      // @ts-expect-error
       logger_level_name = window.LOG_LEVEL;
     }
     const logger_level = LOG_LEVELS[logger_level_name];
