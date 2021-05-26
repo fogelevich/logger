@@ -1,6 +1,6 @@
 import { ConsoleLogger } from "../logger";
 
-const log = new ConsoleLogger("Example Log", "VERBOSE");
+const log = new ConsoleLogger("Example Log", "INFO");
 
 log.error("test error");
 log.info("test info");

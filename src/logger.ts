@@ -1,3 +1,4 @@
+import {ts} from './res/index.gen'
 export interface Logger {
   debug(msg: string): void;
   info(msg: string): void;
@@ -26,15 +27,6 @@ export class ConsoleLogger implements Logger {
 
   static LOG_LEVEL: string | null = null;
 
-  _padding(n: number): string {
-    return n < 10 ? "0" + n : "" + n;
-  }
-
-  _ts(): string {
-    const dt = new Date();
-    return [this._padding(dt.getMinutes()), this._padding(dt.getSeconds())].join(":") + "." + dt.getMilliseconds();
-  }
-
   _log(type: string, ...msg: any[]): void {
     let logger_level_name: string = this.level;
     if (ConsoleLogger.LOG_LEVEL) {
@@ -58,11 +50,8 @@ export class ConsoleLogger implements Logger {
     if (type === "WARN" && console.warn) {
       log = console.warn.bind(console);
     }
-    if (type === "TRACE" && console.trace) {
-      log = console.trace.bind(console);
-    }
 
-    const prefix = `[${type}] ${this._ts()} ${this.name}`;
+    const prefix = `[${type}] ${ts()} ${this.name}`;
 
     if (msg.length === 1 && typeof msg[0] === "string") {
       log(`${prefix} - ${msg[0]}`);

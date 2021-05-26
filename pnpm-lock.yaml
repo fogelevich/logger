@@ -4,6 +4,8 @@ specifiers:
   '@rushstack/heft': ^0.30.6
   '@types/node': ^15.6.1
   cross-env: ^7.0.3
+  gentype: ^3.50.0
+  rescript: ^9.1.2
   ts-node: ^10.0.0
   tslib: ^2.2.0
   typescript: ^4.2.4
@@ -16,6 +18,8 @@ devDependencies:
   '@rushstack/heft': 0.30.6
   '@types/node': 15.6.1
   cross-env: 7.0.3
+  gentype: 3.50.0
+  rescript: 9.1.2
   typescript: 4.2.4
 
 packages:
@@ -1879,6 +1883,12 @@ packages:
   /gensync/1.0.0-beta.2:
     resolution: {integrity: sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg==}
     engines: {node: '>=6.9.0'}
+    dev: true
+
+  /gentype/3.50.0:
+    resolution: {integrity: sha512-EKZzbS4HBuw80zDm5ZJxDdfoGw4nYClTgkv4vp8/db1MXmvCdJSA2NuvxNBYF8i5VqYccdQWzNGClmhWpTFWFQ==}
+    hasBin: true
+    requiresBuild: true
     dev: true
 
   /get-caller-file/2.0.5:
@@ -3791,6 +3801,12 @@ packages:
 
   /require-main-filename/2.0.0:
     resolution: {integrity: sha512-NKN5kMDylKuldxYLSUfrbo5Tuzh4hd+2E8NPPX02mZtn1VuREQToYe/ZdlJy+J3uCpfaiGF05e7B8W0iXbQHmg==}
+    dev: true
+
+  /rescript/9.1.2:
+    resolution: {integrity: sha512-4wHvTDv3nyYnAPJHcg1RGG8z7u3HDiBf6RN3P/dITDv859Qo35aKOzJWQtfBzbAs0EKNafLqei3TnUqiAv6BwQ==}
+    hasBin: true
+    requiresBuild: true
     dev: true
 
   /resolve-from/5.0.0:
