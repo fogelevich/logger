@@ -20,7 +20,7 @@ export class ConsoleLogger implements Logger {
   name: string;
   level: string;
 
-  constructor(name: string, level = "INFO") {
+  constructor(name: string, level = "DEBUG") {
     this.name = name;
     this.level = level;
   }
