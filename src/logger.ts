@@ -7,14 +7,14 @@ export interface Logger {
   trace(msg: string): void;
 }
 
-enum LOG_LEVELS {
-  VERBOSE = 1,
-  DEBUG,
-  INFO,
-  WARN,
-  ERROR,
-  TRACE,
-}
+const LOG_LEVELS = {
+  VERBOSE: 1,
+  DEBUG: 2,
+  INFO: 3,
+  WARN: 4,
+  ERROR: 5,
+  TRACE: 6
+};
 
 export class ConsoleLogger implements Logger {
   name: string;
