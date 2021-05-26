@@ -1,3 +1,8 @@
+declare global {
+    interface Window {
+        LOG_LEVEL: string;
+    }
+}
 export interface Logger {
     debug(msg: string): void;
     info(msg: string): void;
@@ -8,7 +13,7 @@ export declare class ConsoleLogger implements Logger {
     name: string;
     level: string;
     constructor(name: string, level?: string);
-    static LOG_LEVEL: null;
+    static LOG_LEVEL: string | null;
     _padding(n: number): string;
     _ts(): string;
     _log(type: string, ...msg: any[]): void;
