@@ -1,5 +1,7 @@
-import {prefixFn} from './res/index.bs'
-export interface Logger {
+import { prefixFn } from "./res/index.bs";
+export interface LoggerI {
+  log(msg: string): void;
+  verbose(msg: string): void;
   debug(msg: string): void;
   info(msg: string): void;
   warn(msg: string): void;
@@ -8,15 +10,15 @@ export interface Logger {
 }
 
 enum LOG_LEVELS {
-  VERBOSE= 1,
+  VERBOSE = 1,
   DEBUG,
   INFO,
   WARN,
   ERROR,
-  TRACE
-};
+  TRACE,
+}
 
-export class ConsoleLogger implements Logger {
+export class ConsoleLogger implements LoggerI {
   name: string;
   level: string;
 
@@ -50,8 +52,8 @@ export class ConsoleLogger implements Logger {
     if (type === "WARN" && console.warn) {
       log = console.warn.bind(console);
     }
-    
-    const prefix = prefixFn(type, this.name)
+
+    const prefix = prefixFn(type, this.name);
 
     if (msg.length === 1 && typeof msg[0] === "string") {
       log(`${prefix} - ${msg[0]}`);
