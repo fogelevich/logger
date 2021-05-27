@@ -7,7 +7,11 @@
 ---
 
 <!-- prettier-ignore-start -->
-[![Inline docs](http://inch-ci.org/github/biptik/logger.svg?branch=master)](http://inch-ci.org/github/biptik/logger)
+![ts](https://badgen.net/badge/Built%20With/TypeScript/blue)
+![license](https://badgen.net/badge/license/MIT/blue)
+![release](https://badgen.net//badge/release/0.0.1/red)
+
+
 <!-- prettier-ignore-end -->
 
 > Abstraction over using console.log with priority levels
