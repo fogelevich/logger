@@ -10,7 +10,7 @@
 ![ts](https://badgen.net/badge/Built%20With/TypeScript/blue)
 ![rs](https://badgen.net/badge/Built%20With/ReScript/red)
 ![license](https://badgen.net/badge/license/MIT/blue)
-![release](https://badgen.net//badge/release/0.0.1/orange)
+![release](https://badgen.net//badge/release/0.0.2/orange)
 
 
 <!-- prettier-ignore-end -->
@@ -19,8 +19,8 @@
 
 ## Installation
 
-This module is distributed via [npm](npm) which is bundled with [node](node) and
-should be installed as one of your project's `dependencies`:
+This module is distributed via [github npm registry (GitHub Packages)](npm) which is bundled with [node](node) and
+should be installed as one of your project's `dependencies`. See more about work with [Github Packages](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry) and [installing a package](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#installing-a-package):
 
 ```
 npm install @biptik/logger
@@ -89,4 +89,4 @@ Priority - ERROR
 
 ## Usage with TypeScript
 
-See [the typescript test](./src/spec/example.test.ts) for example usage
+See [the typescript usage example](./src/spec/example.test.ts)
