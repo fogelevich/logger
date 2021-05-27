@@ -8,8 +8,9 @@
 
 <!-- prettier-ignore-start -->
 ![ts](https://badgen.net/badge/Built%20With/TypeScript/blue)
+![rs](https://badgen.net/badge/Built%20With/ReScript/red)
 ![license](https://badgen.net/badge/license/MIT/blue)
-![release](https://badgen.net//badge/release/0.0.1/red)
+![release](https://badgen.net//badge/release/0.0.1/orange)
 
 
 <!-- prettier-ignore-end -->
