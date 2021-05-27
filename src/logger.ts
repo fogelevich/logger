@@ -1,4 +1,4 @@
-import { prefixFn } from "./res/index.bs";
+import {prefixFn} from './res/index.bs';
 export interface LoggerI {
   log(msg: string): void;
   verbose(msg: string): void;
@@ -15,14 +15,14 @@ enum LOG_LEVELS {
   INFO,
   WARN,
   ERROR,
-  TRACE,
+  TRACE
 }
 
 export class ConsoleLogger implements LoggerI {
   name: string;
   level: string;
 
-  constructor(name: string, level = "DEBUG") {
+  constructor(name: string, level = 'DEBUG') {
     this.name = name;
     this.level = level;
   }
@@ -35,7 +35,7 @@ export class ConsoleLogger implements LoggerI {
       logger_level_name = ConsoleLogger.LOG_LEVEL;
     }
     // @ts-expect-error
-    if (typeof window !== "undefined" && window.LOG_LEVEL) {
+    if (typeof window !== 'undefined' && window.LOG_LEVEL) {
       // @ts-expect-error
       logger_level_name = window.LOG_LEVEL;
     }
@@ -46,20 +46,20 @@ export class ConsoleLogger implements LoggerI {
     }
 
     let log = console.log.bind(console);
-    if (type === "ERROR" && console.error) {
+    if (type === 'ERROR' && console.error) {
       log = console.error.bind(console);
     }
-    if (type === "WARN" && console.warn) {
+    if (type === 'WARN' && console.warn) {
       log = console.warn.bind(console);
     }
 
     const prefix = prefixFn(type, this.name);
 
-    if (msg.length === 1 && typeof msg[0] === "string") {
+    if (msg.length === 1 && typeof msg[0] === 'string') {
       log(`${prefix} - ${msg[0]}`);
     } else if (msg.length === 1) {
       log(prefix, msg[0]);
-    } else if (typeof msg[0] === "string") {
+    } else if (typeof msg[0] === 'string') {
       let obj = msg.slice(1);
       if (obj.length === 1) {
         obj = obj[0];
@@ -71,30 +71,30 @@ export class ConsoleLogger implements LoggerI {
   }
 
   log(...msg: any[]) {
-    this._log("INFO", ...msg);
+    this._log('INFO', ...msg);
   }
 
   info(...msg: any[]) {
-    this._log("INFO", ...msg);
+    this._log('INFO', ...msg);
   }
 
   warn(...msg: any[]) {
-    this._log("WARN", ...msg);
+    this._log('WARN', ...msg);
   }
 
   error(...msg: any[]) {
-    this._log("ERROR", ...msg);
+    this._log('ERROR', ...msg);
   }
 
   debug(...msg: any[]) {
-    this._log("DEBUG", ...msg);
+    this._log('DEBUG', ...msg);
   }
 
   verbose(...msg: any[]) {
-    this._log("VERBOSE", ...msg);
+    this._log('VERBOSE', ...msg);
   }
 
   trace(...msg: any[]) {
-    this._log("TRACE", ...msg);
+    this._log('TRACE', ...msg);
   }
 }

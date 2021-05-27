@@ -32,15 +32,15 @@ It couldn't be easier! You create an instance of a class with a name and the req
 
 ```js
 // default level
-const log = new ConsoleLogger("Example Log");
+const log = new ConsoleLogger('Example Log');
 
-log.error("test error");
-log.info("test info");
-log.verbose("test verbose");
-log.warn("test warn");
-log.log("test log");
-log.debug("test debug");
-log.trace("test trace");
+log.error('test error');
+log.info('test info');
+log.verbose('test verbose');
+log.warn('test warn');
+log.log('test log');
+log.debug('test debug');
+log.trace('test trace');
 ```
 
 ```console
@@ -59,15 +59,15 @@ Displays messages with the specified priority and higher to the console
 
 ```js
 // error level
-log = new ConsoleLogger("Example Log", "ERROR");
+log = new ConsoleLogger('Example Log', 'ERROR');
 
-log.error("test error");
-log.info("test info");
-log.verbose("test verbose");
-log.warn("test warn");
-log.log("test log");
-log.debug("test debug");
-log.trace("test trace");
+log.error('test error');
+log.info('test info');
+log.verbose('test verbose');
+log.warn('test warn');
+log.log('test log');
+log.debug('test debug');
+log.trace('test trace');
 ```
 
 ```console

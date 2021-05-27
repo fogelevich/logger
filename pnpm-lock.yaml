@@ -5,6 +5,7 @@ specifiers:
   '@types/node': ^15.6.1
   cross-env: ^7.0.3
   gentype: ^3.50.0
+  prettier: ^2.3.0
   rescript: ^9.1.2
   ts-node: ^10.0.0
   tslib: ^2.2.0
@@ -18,6 +19,7 @@ devDependencies:
   '@types/node': 15.6.1
   cross-env: 7.0.3
   gentype: 3.50.0
+  prettier: 2.3.0
   rescript: 9.1.2
   ts-node: 10.0.0_d2424d8ba14dff607ab94d9707a8bf6b
   typescript: 4.2.4
@@ -3601,6 +3603,12 @@ packages:
 
   /prettier/2.1.2:
     resolution: {integrity: sha512-16c7K+x4qVlJg9rEbXl7HEGmQyZlG4R9AgP+oHKRMsMsuk8s+ATStlf1NpDqyBI1HpVyfjLOeMhH2LvuNvV5Vg==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
+    dev: true
+
+  /prettier/2.3.0:
+    resolution: {integrity: sha512-kXtO4s0Lz/DW/IJ9QdWhAf7/NmPWQXkFr/r/WkR3vyI+0v8amTDxiaQSLzs8NBlytfLWX/7uQUMIW677yLKl4w==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true
