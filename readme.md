@@ -54,7 +54,7 @@ Priority - DEFAULT
 [TRACE] 46:04.707 Example Log - test trace
 ```
 
-Displays messages with the specified priority and higher to the consol
+Displays messages with the specified priority and higher to the console
 
 ```js
 // error level
