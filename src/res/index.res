@@ -1,4 +1,3 @@
-@genType
 let padding = (n: int) => {
   switch n {
   | n if n < 10 => "0" ++ Belt_Int.toString(n)
@@ -6,7 +5,6 @@ let padding = (n: int) => {
   }
 }
 
-@genType
 let ts = () => {
   let date = Js.Date.make()
   open Js.Array2
@@ -16,4 +14,9 @@ let ts = () => {
   ]->joinWith(":") ++
   "." ++
   date->Js.Date.getMilliseconds->Belt.Float.toString
+}
+
+@genType
+let prefixFn = (~logLevelsType, ~name) => {
+  `[${logLevelsType}] ${ts()} ${name}`
 }

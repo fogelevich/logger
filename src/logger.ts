@@ -1,4 +1,4 @@
-import { ts } from "./res/index.bs.js";
+import { prefixFn } from "./res/index.bs";
 export interface LoggerI {
   log(msg: string): void;
   verbose(msg: string): void;
@@ -9,14 +9,14 @@ export interface LoggerI {
   trace(msg: string): void;
 }
 
-const LOG_LEVELS = {
-  VERBOSE: 1,
-  DEBUG: 2,
-  INFO: 3,
-  WARN: 4,
-  ERROR: 5,
-  TRACE: 6,
-};
+enum LOG_LEVELS {
+  VERBOSE = 1,
+  DEBUG,
+  INFO,
+  WARN,
+  ERROR,
+  TRACE,
+}
 
 export class ConsoleLogger implements LoggerI {
   name: string;
@@ -53,7 +53,7 @@ export class ConsoleLogger implements LoggerI {
       log = console.warn.bind(console);
     }
 
-    const prefix = `[${type}] ${ts()} ${this.name}`;
+    const prefix = prefixFn(type, this.name);
 
     if (msg.length === 1 && typeof msg[0] === "string") {
       log(`${prefix} - ${msg[0]}`);
