@@ -1,5 +1,7 @@
-import {ts} from './res/index.bs.js'
-export interface Logger {
+import { ts } from "./res/index.bs.js";
+export interface LoggerI {
+  log(msg: string): void;
+  verbose(msg: string): void;
   debug(msg: string): void;
   info(msg: string): void;
   warn(msg: string): void;
@@ -13,10 +15,10 @@ const LOG_LEVELS = {
   INFO: 3,
   WARN: 4,
   ERROR: 5,
-  TRACE: 6
+  TRACE: 6,
 };
 
-export class ConsoleLogger implements Logger {
+export class ConsoleLogger implements LoggerI {
   name: string;
   level: string;
 

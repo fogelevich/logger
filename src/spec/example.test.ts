@@ -1,4 +1,4 @@
-import { ConsoleLogger } from "../logger";
+import { ConsoleLogger, LoggerI } from "../logger";
 
 function testPriority(name) {
   console.log("-------------------------------");
@@ -6,7 +6,7 @@ function testPriority(name) {
   console.log("-------------------------------");
 }
 
-let log = new ConsoleLogger("Example Log");
+let log: LoggerI = new ConsoleLogger("Example Log");
 
 testPriority("DEFAULT");
 log.error("test error");
